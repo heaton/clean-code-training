@@ -1,0 +1,18 @@
+apply plugin: 'java'
+
+repositories {
+  mavenCentral()
+  jcenter()
+}
+
+dependencies {
+  compile 'com.google.guava:guava:19.+',
+      'joda-time:joda-time:2.9.1',
+      'com.google.code.findbugs:jsr305:3.0.1'
+  testCompile 'junit:junit:4.+',
+      'org.mockito:mockito-core:1.+'
+}
+
+task wrapper(type: Wrapper) {
+  gradleVersion = '2.10'
+}

@@ -1,37 +1,21 @@
-package com.thoughtworks.videoclub;/**
- * Tema Refactorizaciones
- * 
- * Ejemplo de aplicaci�n de refactorizaciones. Actualizado para colecciones
- * gen�ricas de java 1.5
- * 
- * @author M. Fowler y <A HREF="mailto:clopezno@ubu.es">Carlos L�pez</A>
- * @version 1.1
- * @see java.io.File
- * 
- */
+package com.thoughtworks.videoclub;
 
 public class Movie {
-	public static final int CHILDRENS = 2;
-	public static final int REGULAR = 0;
-	public static final int NEW_RELEASE = 1;
 
-	private String _title;
-	private int _priceCode;
+  private final String title;
+  private final Price price;
 
-	public Movie(String title, int priceCode) {
-		_title = title;
-		_priceCode = priceCode;
-	}
+  public Movie(String title, Price price) {
+    this.title = title;
+    this.price = price;
+  }
 
-	public int getPriceCode() {
-		return _priceCode;
-	}
+  public Price price() {
+    return price;
+  }
 
-	public void setPriceCode(int arg) {
-		_priceCode = arg;
-	}
+  public String title() {
+    return title;
+  }
 
-	public String getTitle() {
-		return _title;
-	}
 }

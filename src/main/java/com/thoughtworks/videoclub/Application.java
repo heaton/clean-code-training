@@ -1,12 +1,13 @@
 package com.thoughtworks.videoclub;
 
 
-public class VideoClubAplicacion {
+public class Application {
 
 	public static void main(String[] arg) {
-		Movie m1 = new Movie("Sky Captain", 1);
-		Movie m3 = new Movie("Accion Mutante", 0);
-		Movie m4 = new Movie("Hermano Oso", 2);
+		Movie m1 = new RegularMovie("Sky Captain");
+		Movie m2 = new RegularMovie("Alejandro Magno");
+		Movie m3 = new NewReleaseMovie("Accion Mutante");
+		Movie m4 = new ChildrenMovie("Hermano Oso");
 
 		Customer c1 = new Customer("Manuel");
 
